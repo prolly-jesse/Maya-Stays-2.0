@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://maya-stays-booking-bliss.lovable.app/sitemap.xml
+Sitemap: https://mayastays.com/sitemap.xml
