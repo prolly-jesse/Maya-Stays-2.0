@@ -22,7 +22,11 @@ const images = [
   { src: bedroom, alt: "Cozy king-size bed with mosquito net", tall: true },
   { src: kitchenLiving, alt: "Suite kitchen and living area" },
   { src: rooftopLounge, alt: "Rooftop lounge with garden views" },
-  { src: spiralStaircase, alt: "Elegant spiral staircase entrance", tall: true },
+  {
+    src: spiralStaircase,
+    alt: "Elegant spiral staircase entrance",
+    tall: true,
+  },
   { src: bathroom, alt: "Modern marble-finish bathroom" },
   { src: kitchenette, alt: "Fully equipped kitchenette" },
   { src: balconyView, alt: "Balcony overlooking the property" },
@@ -73,14 +77,22 @@ const GallerySection = () => {
 
         {/* Video Tours */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-          {["/videos/tour-1.mp4", "/videos/tour-2.mp4"].map((src, i) => (
-            <div key={i} className="glass-card rounded-2xl overflow-hidden aspect-video">
+          {[
+            "https://res.cloudinary.com/dcpqn8ecp/video/upload/f_auto,q_auto/v1773726107/tour-1_q2htez.mp4",
+            "https://res.cloudinary.com/dcpqn8ecp/video/upload/f_auto,q_auto/v1773740317/tour-2_q27r8k.mp4",
+          ].map((src, i) => (
+            <div
+              key={i}
+              className="glass-card rounded-2xl overflow-hidden aspect-video"
+            >
               <video
                 src={src}
-                controls
-                preload="metadata"
+                autoPlay
+                muted
+                loop
+                playsInline // Required for autoplay on iOS Safari
                 className="w-full h-full object-cover"
-                poster=""
+                poster={src.replace(".mp4", ".jpg")}
               >
                 Your browser does not support the video tag.
               </video>
