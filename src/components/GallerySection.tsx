@@ -1,5 +1,8 @@
+import { useState, useEffect } from "react"; // Added useState and useEffect
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { X, ChevronLeft, ChevronRight } from "lucide-react"; // Optional: for icons
 
+// ... your image imports remain the same ...
 import buildingExterior from "@/assets/building-exterior.jpg";
 import buildingBalcony from "@/assets/building-balcony.jpg";
 import kitchenLiving from "@/assets/kitchen-living.jpg";
@@ -40,6 +43,16 @@ const images = [
 
 const GallerySection = () => {
   const ref = useScrollReveal();
+  const [selectedImg, setSelectedImg] = useState(null);
+
+  // Prevent scrolling when an image is open
+  useEffect(() => {
+    if (selectedImg) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [selectedImg]);
 
   return (
     <section id="gallery" className="section-padding relative overflow-hidden">
@@ -52,25 +65,33 @@ const GallerySection = () => {
             <span className="gold-text">Gallery</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            A glimpse into the Maya Stays experience.
+            A glimpse into the Maya Stays experience. Tap any image to expand.
           </p>
         </div>
 
-        {/* Responsive grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4">
+        {/* Responsive grid optimized for mobile */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
           {images.map((img, i) => (
             <div
               key={i}
-              className={`rounded-xl overflow-hidden glass-card group ${
-                img.tall ? "row-span-2" : ""
-              }`}
+              onClick={() => setSelectedImg(img)}
+              className={`
+                relative rounded-xl overflow-hidden glass-card group cursor-zoom-in transition-all duration-300
+                ${
+                  img.tall
+                    ? "row-span-2 h-[320px] md:h-full"
+                    : "h-[150px] md:h-[220px]"
+                }
+              `}
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="w-full h-full object-cover group-hover:scale-105 active:scale-95 transition-transform duration-700 ease-out"
                 loading="lazy"
               />
+              {/* Subtle overlay for mobile to make it feel interactive */}
+              <div className="absolute inset-0 bg-black/5 md:hidden pointer-events-none" />
             </div>
           ))}
         </div>
@@ -83,14 +104,14 @@ const GallerySection = () => {
           ].map((src, i) => (
             <div
               key={i}
-              className="glass-card rounded-2xl overflow-hidden aspect-video"
+              className="glass-card rounded-2xl overflow-hidden aspect-video border border-white/10"
             >
               <video
                 src={src}
                 autoPlay
                 muted
                 loop
-                playsInline // Required for autoplay on iOS Safari
+                playsInline
                 className="w-full h-full object-cover"
                 poster={src.replace(".mp4", ".jpg")}
               >
@@ -100,6 +121,32 @@ const GallerySection = () => {
           ))}
         </div>
       </div>
+
+      {/* --- LIGHTBOX OVERLAY --- */}
+      {selectedImg && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-in fade-in duration-300"
+          onClick={() => setSelectedImg(null)}
+        >
+          <button
+            className="absolute top-6 right-6 text-white/70 hover:text-white p-2 z-[110]"
+            onClick={() => setSelectedImg(null)}
+          >
+            <X size={32} />
+          </button>
+
+          <div className="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center">
+            <img
+              src={selectedImg.src}
+              alt={selectedImg.alt}
+              className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl animate-in zoom-in-95 duration-300"
+            />
+            <p className="text-white/80 mt-4 font-light tracking-wide text-center px-4">
+              {selectedImg.alt}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
