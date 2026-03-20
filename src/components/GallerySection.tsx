@@ -99,7 +99,7 @@ const GallerySection = () => {
         {/* Video Tours */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            "https://res.cloudinary.com/dcpqn8ecp/video/upload/v1774000458/WhatsApp_Video_2026-03-20_at_11.07.40_kx9ctl.mp4",
+            "https://res.cloudinary.com/dcpqn8ecp/video/upload/f_auto,q_auto/v1774000458/WhatsApp_Video_2026-03-20_at_11.07.40_kx9ctl.mp4",
             "https://res.cloudinary.com/dcpqn8ecp/video/upload/f_auto,q_auto/v1773740317/tour-2_q27r8k.mp4",
           ].map((src, i) => (
             <div
