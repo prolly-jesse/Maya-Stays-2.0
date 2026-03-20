@@ -15,7 +15,7 @@ const suites = [
       "King-size bed",
       "Smart TV",
       "High-speed Wi-Fi",
-      "En-suite bathroom",
+      "Modern Marble-finish bathroom",
       "Secure parking",
     ],
     guests: "1-2 guests",
