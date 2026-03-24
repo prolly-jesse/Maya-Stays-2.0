@@ -30,7 +30,7 @@ const HeroSection = () => {
       >
         <div className="inline-block glass rounded-full px-5 py-2 mb-6">
           <span className="text-sm font-medium text-primary">
-            Starting from KSh 3,500/24hrs
+            Starting from KSh 3,000/24hrs
           </span>
         </div>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">

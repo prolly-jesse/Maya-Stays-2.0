@@ -8,7 +8,7 @@ import suiteTwiga from "@/assets/suite-twiga.jpg";
 const suites = [
   {
     title: "Kifaru Suite",
-    price: "KSh 3,500",
+    price: "KSh 3,000",
     period: "/24hrs",
     image: suiteKifaru,
     features: [
@@ -36,7 +36,7 @@ const suites = [
   },
   {
     title: "Nyati Suite",
-    price: "KSh 3,500",
+    price: "KSh 3,000",
     period: "/24hrs",
     image: suiteNyati,
     features: [
@@ -50,7 +50,7 @@ const suites = [
   },
   {
     title: "Twiga Suite",
-    price: "KSh 3,500",
+    price: "KSh 3,000",
     period: "/24hrs",
     image: suiteTwiga,
     features: [

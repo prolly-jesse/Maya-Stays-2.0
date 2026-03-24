@@ -27,7 +27,10 @@ const Navbar = () => {
         }`}
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-20">
-          <a href="#" className="flex items-center gap-2 font-serif text-xl sm:text-2xl font-bold gold-text group">
+          <a
+            href="#"
+            className="flex items-center gap-2 font-serif text-xl sm:text-2xl font-bold gold-text group"
+          >
             <img
               src={logo}
               alt="Maya Stays logo"
@@ -94,7 +97,7 @@ const Navbar = () => {
           href="#booking"
           className="block w-full text-center gold-gradient text-primary-foreground font-semibold py-3.5 rounded-full text-base active:scale-[0.98] transition-transform duration-200"
         >
-          Book Now — From KSh 3,500
+          Book Now — From KSh 3,000
         </a>
       </div>
     </>

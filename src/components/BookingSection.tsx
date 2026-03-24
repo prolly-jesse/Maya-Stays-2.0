@@ -146,10 +146,10 @@ const BookingSection = () => {
                   className={inputClass}
                 >
                   <option value="">Any Available Suite</option>
-                  <option value="kifaru">Kifaru Suite — KSh 3,500/24hrs</option>
+                  <option value="kifaru">Kifaru Suite — KSh 3,000/24hrs</option>
                   <option value="tembo">Tembo Suite — KSh 3,500/24hrs</option>
-                  <option value="nyati">Nyati Suite — KSh 3,500/24hrs</option>
-                  <option value="twiga">Twiga Suite — KSh 3,500/24hrs</option>
+                  <option value="nyati">Nyati Suite — KSh 3,000/24hrs</option>
+                  <option value="twiga">Twiga Suite — KSh 3,000/24hrs</option>
                 </select>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">

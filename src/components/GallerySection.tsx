@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"; // Added useState and useEffect
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { X, ChevronLeft, ChevronRight } from "lucide-react"; // Optional: for icons
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-// ... your image imports remain the same ...
+// ...  image imports remain the same ...
 import buildingExterior from "@/assets/building-exterior.jpg";
 import buildingBalcony from "@/assets/building-balcony.jpg";
 import kitchenLiving from "@/assets/kitchen-living.jpg";
