@@ -10,7 +10,8 @@ const suites = [
     title: "Kifaru Suite",
     price: "KSh 3,000",
     period: "/24hrs",
-    image: suiteKifaru,
+    image:
+      "https://res.cloudinary.com/dcpqn8ecp/image/upload/v1776885816/WhatsApp_Image_2026-04-16_at_09.14.44_tdtmll.jpg",
     features: [
       "King-size bed",
       "Smart TV",
@@ -24,7 +25,8 @@ const suites = [
     title: "Tembo Suite",
     price: "KSh 3,500",
     period: "/24hrs",
-    image: suiteTembo,
+    image:
+      "https://res.cloudinary.com/dcpqn8ecp/image/upload/v1776885813/WhatsApp_Image_2026-04-16_at_09.14.45_wbfrez.jpg",
     features: [
       "King-size bed",
       "Smart TV",
@@ -52,7 +54,8 @@ const suites = [
     title: "Twiga Suite",
     price: "KSh 3,000",
     period: "/24hrs",
-    image: suiteTwiga,
+    image:
+      "https://res.cloudinary.com/dcpqn8ecp/image/upload/v1776885860/WhatsApp_Image_2026-04-16_at_09.14.48_2_fqbaye.jpg",
     features: [
       "King-size bed",
       "Smart TV",
