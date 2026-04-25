@@ -88,8 +88,8 @@ const Footer = () => (
             <Mail size={14} /> staysmaya@gmail.com
           </a>
           <p className="flex items-start gap-2">
-            <MapPin size={14} className="mt-0.5 shrink-0" /> 100M behind Dreams
-            Hotel, Kisumu-Busia Highway
+            <MapPin size={14} className="mt-0.5 shrink-0" /> Along the
+            Kisumu-Busia Highway
           </p>
         </div>
       </div>

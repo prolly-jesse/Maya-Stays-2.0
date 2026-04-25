@@ -5,7 +5,7 @@ const points = [
   {
     icon: MapPin,
     title: "Prime Location",
-    desc: "100M behind Dreams Hotel on the Kisumu-Busia Highway.",
+    desc: "Along the Kisumu-Busia Highway.",
   },
   {
     icon: Globe,
@@ -51,7 +51,9 @@ const StrategicHub = () => {
               <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_rgba(114,201,189,0.15)] transition-all duration-500">
                 <p.icon size={22} className="text-primary" />
               </div>
-              <h3 className="font-serif font-semibold text-lg mb-2">{p.title}</h3>
+              <h3 className="font-serif font-semibold text-lg mb-2">
+                {p.title}
+              </h3>
               <p className="text-muted-foreground text-sm">{p.desc}</p>
             </div>
           ))}

@@ -370,7 +370,7 @@ const BookingSection = () => {
         <div className="mt-10 glass rounded-2xl overflow-hidden aspect-[16/9] sm:aspect-[21/9]">
           <iframe
             title="Maya Stays Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d34.1183954!3d0.45797679999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17!3m3!1m2!1s0x177f61ade79a6d41%3A0xb269da638e4d88ad!2sDrimz%20Hotel!5e0!3m2!1sen!2ske!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6069.691949569732!2d34.118754432490924!3d0.4558443897028068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177f97dc76915c79%3A0x16864e370892f854!2sMaya%20Stays!5e0!3m2!1sen!2ske!4v1777102317323!5m2!1sen!2ske"
             className="w-full h-full border-0 opacity-80"
             loading="lazy"
             allowFullScreen
