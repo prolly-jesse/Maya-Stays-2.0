@@ -29,14 +29,19 @@ const Navbar = () => {
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-16 sm:h-20">
           <a
             href="#"
-            className="flex items-center gap-2 font-serif text-xl sm:text-2xl font-bold gold-text group"
+            className="flex items-center gap-3 font-serif text-xl sm:text-2xl font-bold gold-text group transition-all duration-300"
           >
-            <img
-              src={logo}
-              alt="Maya Stays logo"
-              className="h-8 sm:h-10 w-auto brand-glow-dual group-hover:scale-110 transition-transform duration-500"
-            />
-            Maya Stays
+            <div className="relative">
+              <img
+                // f_auto: best format (webp/avif), q_auto: best quality, w_120: resize for header
+                src="https://res.cloudinary.com/dcpqn8ecp/image/upload/f_auto,q_auto,w_120,c_scale/v1777244260/logo_fovumc.png"
+                alt="Maya Stays logo"
+                className="h-8 sm:h-12 w-auto object-contain brand-glow-dual group-hover:scale-110 transition-transform duration-500 ease-out"
+              />
+            </div>
+            <span className="tracking-wide group-hover:translate-x-1 transition-transform duration-500">
+              Maya Stays
+            </span>
           </a>
 
           {/* Desktop nav */}

@@ -8,7 +8,9 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <img
-        src={heroBg}
+        src={
+          "https://res.cloudinary.com/dcpqn8ecp/image/upload/f_auto,q_auto,w_120,c_scale/v1777245304/hero-bg_i62fo5.jpg"
+        }
         alt="Maya Stays luxury exterior"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
