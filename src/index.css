@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -85,15 +85,20 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     max-width: 100vw;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
   }
 }
 
@@ -157,32 +162,38 @@
 
   /* Gradients */
   .gold-gradient {
-    background: linear-gradient(135deg, #72C9BD, #ED1968);
-    filter: drop-shadow(0 0 2px rgba(114, 201, 189, 0.5)) drop-shadow(0 0 2px rgba(237, 25, 104, 0.4));
+    background: linear-gradient(135deg, #72c9bd, #ed1968);
+    filter: drop-shadow(0 0 2px rgba(114, 201, 189, 0.5))
+      drop-shadow(0 0 2px rgba(237, 25, 104, 0.4));
   }
 
   .gold-text {
-    background: linear-gradient(135deg, #72C9BD, #ED1968);
+    background: linear-gradient(135deg, #72c9bd, #ed1968);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gold-border {
-    border-image: linear-gradient(135deg, #72C9BD, #ED1968) 1;
+    border-image: linear-gradient(135deg, #72c9bd, #ed1968) 1;
   }
 
   .gradient-border {
     position: relative;
   }
   .gradient-border::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(114, 201, 189, 0.3), rgba(237, 25, 104, 0.3));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    background: linear-gradient(
+      135deg,
+      rgba(114, 201, 189, 0.3),
+      rgba(237, 25, 104, 0.3)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
@@ -195,18 +206,22 @@
 
   /* Glow effects */
   .gold-glow {
-    box-shadow: 0 0 30px rgba(114, 201, 189, 0.2), 0 0 60px rgba(237, 25, 104, 0.1);
+    box-shadow: 0 0 30px rgba(114, 201, 189, 0.2),
+      0 0 60px rgba(237, 25, 104, 0.1);
   }
 
   .brand-glow-dual {
-    filter: drop-shadow(0 0 10px rgba(114, 201, 189, 0.4)) drop-shadow(0 0 10px rgba(237, 25, 104, 0.3));
+    filter: drop-shadow(0 0 10px rgba(114, 201, 189, 0.4))
+      drop-shadow(0 0 10px rgba(237, 25, 104, 0.3));
   }
 
   .light .brand-glow-dual {
-    filter: drop-shadow(0 0 6px rgba(114, 201, 189, 0.25)) drop-shadow(0 0 6px rgba(237, 25, 104, 0.15));
+    filter: drop-shadow(0 0 6px rgba(114, 201, 189, 0.25))
+      drop-shadow(0 0 6px rgba(237, 25, 104, 0.15));
   }
   .light .gold-glow {
-    box-shadow: 0 0 20px rgba(114, 201, 189, 0.12), 0 0 40px rgba(237, 25, 104, 0.06);
+    box-shadow: 0 0 20px rgba(114, 201, 189, 0.12),
+      0 0 40px rgba(237, 25, 104, 0.06);
   }
 
   /* Section utilities */
@@ -216,7 +231,13 @@
 
   .section-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(114, 201, 189, 0.2), rgba(237, 25, 104, 0.15), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(114, 201, 189, 0.2),
+      rgba(237, 25, 104, 0.15),
+      transparent
+    );
   }
 }
 
@@ -236,7 +257,11 @@
 
 /* Mobile tap targets */
 @media (max-width: 767px) {
-  button, a, select, input, textarea {
+  button,
+  a,
+  select,
+  input,
+  textarea {
     min-height: 44px;
   }
 }
