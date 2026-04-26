@@ -87,6 +87,7 @@ const images = [
     id: "neon-sign",
     alt: "Maya Stays illuminated sign",
     category: "Amenities",
+    featured: true,
   },
 ];
 
