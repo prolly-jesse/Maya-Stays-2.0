@@ -2,97 +2,111 @@ import { useState, useEffect, useMemo } from "react"; // Added useState and useE
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-// ...  image imports remain the same ...
-import buildingExterior from "@/assets/building-exterior.jpg";
-import buildingBalcony from "@/assets/building-balcony.jpg";
-import kitchenLiving from "@/assets/kitchen-living.jpg";
-import livingRoom from "@/assets/living-room.jpg";
-import tvLounge from "@/assets/tv-lounge.jpg";
-import parkingArea from "@/assets/parking-area.jpg";
-import entranceGate from "@/assets/entrance-gate.jpg";
-import neonSign from "@/assets/neon-sign.jpg";
-import spiralStaircase from "@/assets/spiral-staircase.jpg";
-import rooftopLounge from "@/assets/rooftop-lounge.jpg";
-import bathroom from "@/assets/bathroom.jpg";
-import kitchenette from "@/assets/kitchenette.jpg";
-import bedroom from "@/assets/bedroom.jpg";
-import courtyard from "@/assets/courtyard.jpg";
-import balconyView from "@/assets/balcony-view.jpg";
+const CLOUD_NAME = "dcpqn8ecp";
+const BASE_URL = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload`;
 
+// Replace the 'id' with the actual filename you uploaded to Cloudinary
 const images = [
   {
-    src: buildingExterior,
+    id: "building-exterior",
     alt: "Maya Stays building exterior",
-    tall: true,
     category: "Exterior",
   },
   {
-    src: courtyard,
+    id: "courtyard",
     alt: "Landscaped courtyard with palm trees",
     category: "Common Areas",
+    featured: true,
   },
   {
-    src: bedroom,
+    id: "bedroom",
     alt: "Cozy king-size bed with mosquito net",
-    tall: true,
     category: "Rooms",
+    featured: true,
   },
   {
-    src: kitchenLiving,
+    id: "kitchen-living",
     alt: "Suite kitchen and living area",
     category: "Rooms",
+    featured: true,
   },
   {
-    src: rooftopLounge,
+    id: "rooftop-lounge",
     alt: "Rooftop lounge with garden views",
     category: "Common Areas",
+    featured: true,
   },
   {
-    src: spiralStaircase,
+    id: "spiral-staircase",
     alt: "Elegant spiral staircase entrance",
-    tall: true,
     category: "Exterior",
+    featured: true,
   },
-  { src: bathroom, alt: "Modern marble-finish bathroom", category: "Rooms" },
-  { src: kitchenette, alt: "Fully equipped kitchenette", category: "Rooms" },
   {
-    src: balconyView,
+    id: "bathroom",
+    alt: "Modern marble-finish bathroom",
+    category: "Rooms",
+    featured: true,
+  },
+  {
+    id: "kitchenette2",
+    alt: "Fully equipped kitchenette",
+    category: "Rooms",
+  },
+  {
+    id: "balcony-view",
     alt: "Balcony overlooking the property",
     category: "Exterior",
+    featured: true,
   },
-  { src: parkingArea, alt: "Secure parking area", category: "Amenities" },
-  { src: tvLounge, alt: "Smart TV lounge", category: "Common Areas" },
+  { id: "parking-area", alt: "Secure parking area", category: "Amenities" },
   {
-    src: buildingBalcony,
+    id: "tv-lounge",
+    alt: "Smart TV lounge",
+    category: "Common Areas",
+    featured: true,
+  },
+  {
+    id: "building-balcony",
     alt: "Building balcony view",
-    tall: true,
+    category: "Exterior",
+    featured: true,
+  },
+  {
+    id: "living-room",
+    alt: "Living room with marble tables",
+    category: "Rooms",
+    featured: true,
+  },
+  {
+    id: "entrance-gate",
+    alt: "Maya Stays entrance gate",
     category: "Exterior",
   },
-  { src: livingRoom, alt: "Living room with marble tables", category: "Rooms" },
-  { src: entranceGate, alt: "Maya Stays entrance gate", category: "Exterior" },
   {
-    src: neonSign,
+    id: "neon-sign",
     alt: "Maya Stays illuminated sign",
-    tall: true,
     category: "Amenities",
   },
-  // Add your remaining 35+ images here with categories...
 ];
 
 const categories = ["All", "Rooms", "Common Areas", "Exterior", "Amenities"];
 
 const GallerySection = () => {
   const ref = useScrollReveal();
-  const [selectedImg, setSelectedImg] = useState(null);
+  const [selectedImg, setSelectedImg] = useState<any>(null);
   const [activeTab, setActiveTab] = useState("All");
 
   // Filter logic
+  // This logic creates the "Preview" effect for the All tab
   const filteredImages = useMemo(() => {
-    return activeTab === "All"
-      ? images
-      : images.filter((img) => img.category === activeTab);
+    if (activeTab === "All") {
+      // Shows only featured images in the "All" view (approx 8-12 images)
+      return images.filter((img) => img.featured);
+    }
+    // Shows EVERY image belonging to that specific category
+    return images.filter((img) => img.category === activeTab);
   }, [activeTab]);
-
   useEffect(() => {
     if (selectedImg) {
       document.body.style.overflow = "hidden";
@@ -141,7 +155,7 @@ const GallerySection = () => {
               className="relative break-inside-avoid rounded-2xl overflow-hidden glass-card group cursor-zoom-in transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 border border-white/5"
             >
               <img
-                src={img.src}
+                src={`${BASE_URL}/f_auto,q_auto,w_600,c_scale/${img.id}`}
                 alt={img.alt}
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 loading="lazy"
