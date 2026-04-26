@@ -1,9 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Bed, Wifi, Tv, Car, ShieldCheck, Bath } from "lucide-react";
-import suiteKifaru from "@/assets/suite-kifaru.jpg";
-import suiteTembo from "@/assets/suite-tembo.jpg";
-import suiteNyati from "@/assets/suite-nyati.jpg";
-import suiteTwiga from "@/assets/suite-twiga.jpg";
 
 const suites = [
   {
@@ -40,7 +36,8 @@ const suites = [
     title: "Nyati Suite",
     price: "KSh 3,000",
     period: "/24hrs",
-    image: suiteNyati,
+    image:
+      "https://res.cloudinary.com/dcpqn8ecp/image/upload/v1777234704/suite-nyati_l9m7dm.jpg",
     features: [
       "King-size bed",
       "Smart TV",
