@@ -15,7 +15,7 @@ const images = [
   {
     id: "courtyard",
     alt: "Landscaped courtyard with palm trees",
-    category: "Common Areas",
+    category: "Exterior",
     featured: true,
   },
   {
@@ -27,7 +27,7 @@ const images = [
   {
     id: "kitchen-living",
     alt: "Suite kitchen and living area",
-    category: "Rooms",
+    category: "Common Areas",
     featured: true,
   },
   {
@@ -45,13 +45,13 @@ const images = [
   {
     id: "bathroom",
     alt: "Modern marble-finish bathroom",
-    category: "Rooms",
+    category: "Common Areas",
     featured: true,
   },
   {
     id: "kitchenette2",
     alt: "Fully equipped kitchenette",
-    category: "Rooms",
+    category: "Common Areas",
   },
   {
     id: "balcony-view",
@@ -75,7 +75,7 @@ const images = [
   {
     id: "living-room",
     alt: "Living room with marble tables",
-    category: "Rooms",
+    category: "Amenities",
     featured: true,
   },
   {
@@ -210,9 +210,12 @@ const GallerySection = () => {
           >
             <X size={32} />
           </button>
-          <div className="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center">
+          <div
+            className="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img
-              src={selectedImg.src}
+              src={`https://res.cloudinary.com/dcpqn8ecp/image/upload/f_auto,q_auto,w_1600/${selectedImg.id}`}
               alt={selectedImg.alt}
               className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl animate-in zoom-in-95 duration-300"
             />
