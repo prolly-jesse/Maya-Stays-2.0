@@ -31,10 +31,21 @@ const images = [
     featured: true,
   },
   {
+    id: "spiral-staircase2",
+    alt: "Elegant spiral staircase entrance",
+    category: "Exterior",
+    featured: true,
+  },
+  {
     id: "rooftop-lounge",
     alt: "Rooftop lounge with garden views",
     category: "Common Areas",
     featured: true,
+  },
+  {
+    id: "spiral-staircase3",
+    alt: "Elegant spiral staircase entrance",
+    category: "Exterior",
   },
   {
     id: "spiral-staircase",
@@ -57,7 +68,6 @@ const images = [
     id: "balcony-view",
     alt: "Balcony overlooking the property",
     category: "Exterior",
-    featured: true,
   },
   { id: "parking-area", alt: "Secure parking area", category: "Amenities" },
   {
@@ -75,7 +85,7 @@ const images = [
   {
     id: "living-room",
     alt: "Living room with marble tables",
-    category: "Amenities",
+    category: "Common Areas",
     featured: true,
   },
   {
@@ -86,8 +96,68 @@ const images = [
   {
     id: "neon-sign",
     alt: "Maya Stays illuminated sign",
+    category: "Exterior",
+    featured: true,
+  },
+  {
+    id: "living-room3",
+    alt: "living-room",
     category: "Amenities",
     featured: true,
+  },
+  {
+    id: "bedroom2",
+    alt: "Cozy king-size bed",
+    category: "Rooms",
+  },
+  {
+    id: "bedroom3",
+    alt: "Cozy king-size bed",
+    category: "Rooms",
+  },
+
+  {
+    id: "balcony-view2",
+    alt: "Building balcony view",
+    category: "Exterior",
+    featured: true,
+  },
+  {
+    id: "living-room5",
+    alt: "living-room",
+    category: "Amenities",
+  },
+  {
+    id: "outview",
+    alt: "Building balcony view",
+    category: "Exterior",
+    
+  },
+  {
+    id: "balcony-view3",
+    alt: "Building balcony view",
+    category: "Exterior",
+    featured: true,
+  },
+  {
+    id: "spiral-staircase4",
+    alt: "Elegant view",
+    category: "Exterior",
+  },
+  {
+    id: "outview2",
+    alt: "Building balcony view",
+    category: "Exterior",
+  },
+  {
+    id: "living-room2",
+    alt: "living-room",
+    category: "Amenities",
+  },
+  {
+    id: "bathroom2",
+    alt: "bathroom",
+    category: "Amenities",
   },
 ];
 
